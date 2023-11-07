@@ -1,0 +1,95 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+      Background-color: #000000;
+    }
+        /* CSS untuk sidebar */
+        .sidebar {
+            height: 90%;
+            width: 150px;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background-color: #626262;
+            padding-top: 20px;
+            transition: 0.3s;
+        }
+
+        .sidebar a {
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #ffffff;
+            display: block;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Tombol untuk membuka dan menutup sidebar */
+        .openbtn {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            z-index: 1;
+            margin-left: 10px;
+            color: #ffffff ;
+        }
+
+        /* Konten halaman */
+        .content {
+            margin-left: 0;
+            padding: 15px;
+        }
+        
+        h1, p, img {
+          text-align: center ;
+          padding: 10px;
+          color: #ffffff;
+        }
+        
+        h2 {
+          color: #ffffff;
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="sidebar" id="mySidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9665;JWP Edutainment's</a>
+    <a href="#">Berada</a>
+    <a href="#">Tools</a>
+    <a href="#">Proyek</a>
+</div>
+
+<div class="content">
+    <span class="openbtn" id="openSidebarBtn" onclick="openNav()">&#9776;</span>
+    <h1>JWP Edutainment's</h1>
+    <img src="https://drive.google.com/uc?export=view&id=13GK_a8jOaH066FRQAiICme8hwgoiFjuV" height="250" width="300">
+    <h2>Selamat Datang</h2>
+    <p>Tim Developer aplikasi silahkan pilih salah satu tombol dibawah ini untuk melakukan suatu tindakan!</p>
+    <button onclick="window.location.href='https://5hfurd557458.pages.dev/feature/se'"><img src="https://drive.google.com/uc?export=view&id=15vnYsmkRk5hragjoKgZ7Mqer8bwMuTbi"width="50px"height="30px" alt="Tombol 1"></button>
+    <button onclick="window.location.href='URL_Tombol_2'"><img src="URL_Gambar_Tombol_2" alt="Tombol 2"></button>
+    <button onclick="window.location.href='URL_Tombol_3'"><img src="URL_Gambar_Tombol_3" alt="Tombol 3"></button>
+</div>
+
+
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.left = "0";
+        document.getElementById("openSidebarBtn").style.display = "none";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.left = "-250px";
+        document.getElementById("openSidebarBtn").style.display = "block";
+    }
+</script>
+
+</body>
+</html>
