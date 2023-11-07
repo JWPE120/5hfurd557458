@@ -9,6 +9,7 @@
         text-align: center;
         margin: 0;
         padding: 0;
+        transition: background-color 2s; /* Efek transisi latar belakang */
     }
 
     h1 {
@@ -20,42 +21,51 @@
         margin: 0 auto;
         background-color: #fff;
         padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
 
     input {
         width: 100%;
-        padding: 10px;
+        padding: 12px;
         margin: 10px 0;
-        border: 1px solid #ccc;
+        border: 2px solid #007BFF;
         border-radius: 5px;
+        font-size: 16px;
     }
 
     button {
         background-color: #007BFF;
         color: #fff;
         border: none;
-        padding: 10px 20px;
+        padding: 12px 24px;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s; /* Efek transisi saat hover */
+        font-size: 18px;
+        transition: background-color 0.3s;
     }
 
     button:hover {
         background-color: #0056b3;
     }
 
-    /* Tambahkan CSS khusus untuk input password */
+    /* CSS khusus untuk input password */
     #password {
         color: #333;
         font-weight: bold;
-        padding: 10px;
-        border: 2px solid #007BFF;
-        border-radius: 5px;
+    }
+
+    /* Style untuk judul h1 */
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* Transisi latar belakang dengan beberapa warna */
+    body:hover {
+        background: linear-gradient(to bottom, #007BFF, #00BFFF, #66CDAA, #FFA500);
     }
 </style>
-
     <script>
         function verifikasiPassword() {
             var password = document.getElementById("password").value;
