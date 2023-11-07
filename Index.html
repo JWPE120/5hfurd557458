@@ -1,0 +1,79 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Verifikasi Password</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    .container {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s; /* Efek transisi saat hover */
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    /* Tambahkan CSS khusus untuk input password */
+    #password {
+        color: #333;
+        font-weight: bold;
+        padding: 10px;
+        border: 2px solid #007BFF;
+        border-radius: 5px;
+    }
+</style>
+
+    <script>
+        function verifikasiPassword() {
+            var password = document.getElementById("password").value;
+            var regex = /^(?=.*\d)(?=.*[a-zA-Z])(?=.*[@#$%^&+=]).{12,}$/;
+
+            if (password === "P@ssw0rd123") {
+                window.location.href = "halaman_lain.html";
+            } else {
+                alert("Password Anda salah, silahkan coba lagi! ");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Masukkan Password</h1>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="verifikasiPassword()">Verifikasi</button>
+    </div>
+</body>
+</html>
