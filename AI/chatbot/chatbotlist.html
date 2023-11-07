@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>chatbot list</title>
+    <style>
+    body {
+        background-color: #000000;
+        text-align: center;
+    }
+
+    h1, p, h2 {
+        color: #ffffff;
+    }
+
+    .item {
+        border: 2px solid #ffffff;
+        margin: 10px;
+        padding: 10px;
+    }
+    
+button {
+    background-color: #0074cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056a4;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Platform Chatbot</h1>
+
+    <img src="https://drive.google.com/uc?export=view&id=1uUcfrVvCYzd5eGMHvNXtg6_tIc9THpfF" width="300" height="300">
+    <p>Silahkan pilih salah satu platform chatbot yang akan anda gunakan!</p>
+    <form>
+        <input type="text" name="search" id="searchInput" placeholder="Cari platform chatbot">
+        <input type="submit" value="Cari">
+    </form>
+
+    <div class="item" data-keywords="bard">
+        <h2>Bard</h2>
+        <img src="https://drive.google.com/uc?export=view&id=1vGp9uKtMZbzgsn-9sfWcvKFlVLohUmEh" width="150" height="150" alt="Gambar 1">
+        <p>Platform Chatbot Google</p>
+        <a href="https://bard.google.com/"><button>Mulai Chat </button></a>
+        <a href="https://jwpentertainments.eu.org/Chatbot/infobard"><button>Informasi platform chatbot</button></a>
+    </div>
+
+    <div class="item" data-keywords="chatgpt">
+        <h2>Chatgpt</h2>
+        <img src="https://drive.google.com/uc?export=view&id=1vXw-lgVIyixvR4_EDapSkRAKmBZ0_dsK" alt="Gambar 2" width="200" height="100">
+        <p>Platform Chatbot OpenAI</p>
+        <a href="https://chat.openai.com/"><button>Mulai Chat</button></a>
+        <a href="https://jwpentertainments.eu.org/Chatbot/infogpt"><button>Informasi platform chatbot</button></a>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const items = document.querySelectorAll(".item");
+
+        document.querySelector("form").addEventListener("submit", function (e) {
+            e.preventDefault();
+            const searchTerm = searchInput.value.toLowerCase();
+            items.forEach((item) => {
+                const keywords = item.getAttribute("data-keywords").toLowerCase();
+                if (keywords.includes(searchTerm)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
