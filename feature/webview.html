@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f0f0f0;
+    }
+
+    .container1 {
+      text-align: center;
+    }
+    
+    .container2 {
+      text-align:center;
+    }
+
+    #urlInput {
+      padding: 5px;
+      margin-right: 5px;
+      width: 90%;
+      position: absolute;
+      top: 1%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .iframe-container {
+      text-align: center;
+      margin-top: 20px;
+      overflow: hidden;
+      max-width: 100%;
+      height: 98vh;
+    }
+
+    iframe {
+      margin-top: 5%;
+      width: 98%;
+      height: 99%;
+      border: 1px solid #ccc;
+    }
+  </style>
+  <title>Web Viewer</title>
+</head>
+<body>
+  <div class="container">
+    <input type="text" id="urlInput" placeholder="URL ujian anda" onkeydown="checkEnter(event)">
+    <div class="iframe-container">
+      <iframe id="webFrame" frameborder="0"></iframe>
+    </div>
+  </div>
+  <script>
+    function checkEnter(event) {
+      if (event.key === "Enter") {
+        loadURL();
+      }
+    }
+
+    function loadURL() {
+      var urlInput = document.getElementById('urlInput').value;
+      var webFrame = document.getElementById('webFrame');
+      webFrame.src = urlInput;
+    }
+  </script>
+</body>
+</html>
